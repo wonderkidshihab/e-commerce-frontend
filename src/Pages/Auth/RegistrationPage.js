@@ -18,7 +18,14 @@ function RegistrationPage() {
                 password: e.target.password.value,
             });
             if (response.status === 201) {
-                localStorage.setItem("token", response.data.access);
+                var loginResponse = await ApiClient.post("/auth/login/", {
+                    username: e.target.username.value,
+                    password: e.target.password.value,
+                });
+                if (loginResponse.status === 200) {
+                    localStorage.setItem("token", loginResponse.data.access);
+                    localStorage.setItem("refresh", loginResponse.data.refresh);
+                }
                 if (params.next) {
                     navigate(params.next);
                 } else {

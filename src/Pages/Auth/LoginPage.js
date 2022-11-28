@@ -18,6 +18,7 @@ function LoginPage() {
             });
             if (response.status === 200) {
                 localStorage.setItem("token", response.data.access);
+                localStorage.setItem("refresh", response.data.refresh);
                 if (params.next) {
                     navigate(params.next);
                 } else {

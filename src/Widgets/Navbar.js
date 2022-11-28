@@ -30,11 +30,11 @@ function NavBar() {
                         <li><a href="#s">Item 3</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl" href="#f">E-Commerce</a>
+                <a className="btn btn-ghost normal-case text-xl" href="/">E-Commerce</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
-                    <li><a href="#s">Item 1</a></li>
+                    <li><a href="/categories">Categories</a></li>
                     <li tabIndex={0}>
                         <a href="#s">
                             Parent
